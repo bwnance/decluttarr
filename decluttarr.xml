@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>decluttarr</Name>
+  <Repository>bwnance/decluttarr</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1698988119</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="RADARR_URL" Target="RADARR_URL" Default="http://radarr:7878" Mode="" Description="url for your radarr instance" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="RADARR_API_KEY" Target="RADARR_KEY" Default="" Mode="" Description="api key for radarr" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_URL" Target="SONARR_URL" Default="http://sonarr:8989" Mode="" Description="url for your sonarr instance" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SONARR_API_KEY" Target="SONARR_KEY" Default="" Mode="" Description="api key for sonarr" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_URL" Target="LIDARR_URL" Default="http://lidarr:8686" Mode="" Description="url for your lidarr instance" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="LIDARR_API_KEY" Target="LIDARR_KEY" Default="" Mode="" Description="api key for lidarr" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="QBITTORRENT_URL" Target="QBITTORRENT_URL" Default="http://qbittorrent:8080" Mode="" Description="url for your qbittorrent instance" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="QBITTORRENT_USERNAME" Target="QBITTORRENT_USERNAME" Default="" Mode="" Description="username for qbittorrent" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="QBITTORRENT_PASSWORD" Target="QBITTORRENT_PASSWORD" Default="" Mode="" Description="password for qbittorrent" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NO_STALLED_REMOVAL_QBIT_TAG" Target="NO_STALLED_REMOVAL_QBIT_TAG" Default="Don't Kill If Stalled" Mode="" Description="Downloads in qBittorrent tagged with this tag will not be killed even if they are stalled" Type="Variable" Display="always" Required="false" Mask="false">Don't Kill If Stalled</Config>
+  <Config Name="PERMITTED_ATTEMPTS" Target="PERMITTED_ATTEMPTS" Default="3" Mode="" Description="Defines how many times a download has to be caught as stalled or stuck downloading metadata before it is removed" Type="Variable" Display="always" Required="false" Mask="false">3</Config>
+  <Config Name="REMOVE_UNMONITORED" Target="REMOVE_UNMONITORED" Default="False" Mode="" Description="Steers whether downloads belonging to unmonitored movies/TV shows are removed from the queue" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="REMOVE_ORPHANS" Target="REMOVE_ORPHANS" Default="False" Mode="" Description="Steers whether orphan downloads are removed from the queue &#13;&#10;&#13;&#10;Orphan downloads those that do not belong to any movie/tvshow anymore (since the movie/TV show was deleted post request)&#13;&#10;&#13;&#10;Orphan downloads are not added to the block list" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="REMOVE_METADATA_MISSING" Target="REMOVE_METADATA_MISSING" Default="False" Mode="" Description="Steers whether downloads stuck obtaining meta data are removed from the queue" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="REMOVE_STALLED" Target="REMOVE_STALLED" Default="False" Mode="" Description="Steers whether stalled downloads with no connections are removed from the queue&#13;&#10;&#13;&#10;Stalled downloads are added to the blocklist, so that they are not re-requested in the future" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="REMOVE_FAILED" Target="REMOVE_FAILED" Default="False" Mode="" Description="Steers whether failed downloads with no connections are removed from the queue&#13;&#10;&#13;&#10;Failed downloads are not added to the blocklist" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="REMOVE_TIMER" Target="REMOVE_TIMER" Default="10" Mode="" Description="Sets the frequency how often the queue is cleaned form orphan and stalled downloads (in minutes)" Type="Variable" Display="always" Required="false" Mask="false">10</Config>
+  <Config Name="TEST_RUN" Target="TEST_RUN" Default="True" Mode="" Description="Allows you to safely try out this tool. If active, downloads will not be removed. " Type="Variable" Display="always" Required="false" Mask="false">True</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="INFO" Mode="" Description="Sets the level at which logging will take place.&#13;&#10;INFO will only show changes applied to Radarr/Sonarr&#13;&#10;&#13;&#10;VERBOSE will show when script runs (even if it results in no change)&#13;&#10;&#13;&#10;&#13;&#10;Permissible Values: CRITICAL, ERROR, WARNING, INFO, VERBOSE, DEBUG" Type="Variable" Display="always" Required="false" Mask="false">INFO</Config>
+</Container>
