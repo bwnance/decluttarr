@@ -12,8 +12,8 @@ ARG SHORT_COMMIT_ID
 ENV IMAGE_TAG=$IMAGE_TAG
 ENV SHORT_COMMIT_ID=$SHORT_COMMIT_ID
 
-LABEL org.opencontainers.image.source="https://github.com/ManiMatter/decluttarr"
-                                                      
+LABEL org.opencontainers.image.source="https://github.com/bwnance/decluttarr"
+
 ENV IS_IN_DOCKER 1
 
 WORKDIR /app
